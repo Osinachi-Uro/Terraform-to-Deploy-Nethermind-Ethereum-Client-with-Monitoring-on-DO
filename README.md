@@ -34,12 +34,12 @@ To debug the cause of this, I checked the deployment flow log and discovered tha
 <img width="947" alt="neth terra apply timing out process held" src="https://github.com/Osinachi-Uro/Terraform-to-Deploy-Nethermind-Ethereum-Client-with-Monitoring-on-DO/assets/83463641/fd2c51c0-f848-49f0-a4a0-909fd0d299bb">
 
 
-I went to the remote exec provisioner block in main.tf file and changed all ```apt-get``` to ```apt```. I can explain how exactly this fixed my issue, but it did.
+I went to the remote exec provisioner block in main.tf file and changed all ```apt-get``` to ```apt```. I can't explain how exactly this fixed my issue, but it did.
 
 
 * Terraform applied successfully
   
-<img width="878" alt="neth terra apply successfull" src="https://github.com/Osinachi-Uro/Terraform-to-Deploy-Nethermind-Ethereum-Client-with-Monitoring-on-DO/assets/83463641/e6c00a36-834a-4475-b26c-5cdf70dcf6ff">
+<img width="878" alt="neth terra apply successful" src="https://github.com/Osinachi-Uro/Terraform-to-Deploy-Nethermind-Ethereum-Client-with-Monitoring-on-DO/assets/83463641/e6c00a36-834a-4475-b26c-5cdf70dcf6ff">
 
 * Ethereum server deployed
 <img width="769" alt="neth droplet" src="https://github.com/Osinachi-Uro/Terraform-to-Deploy-Nethermind-Ethereum-Client-with-Monitoring-on-DO/assets/83463641/4b14d553-3060-45da-9f51-468876e46ead">
@@ -53,9 +53,10 @@ I went to the remote exec provisioner block in main.tf file and changed all ```a
 * Prometheus Pushgateway running
 <img width="769" alt="neth Pushgateway" src="https://github.com/Osinachi-Uro/Terraform-to-Deploy-Nethermind-Ethereum-Client-with-Monitoring-on-DO/assets/83463641/40219d6f-08b9-4102-a2d1-d085393aa665">
 
-* Seq Runnind
+* Seq Running
 <img width="954" alt="neth Seq" src="https://github.com/Osinachi-Uro/Terraform-to-Deploy-Nethermind-Ethereum-Client-with-Monitoring-on-DO/assets/83463641/a0e24b0a-cd9f-4fe5-a066-021dfcb294bf">
 
+* Terraform Destroy
 <img width="570" alt="neth terra destroy" src="https://github.com/Osinachi-Uro/Terraform-to-Deploy-Nethermind-Ethereum-Client-with-Monitoring-on-DO/assets/83463641/757bbe86-70b2-4cbe-9713-7f3f10adcdf7">
 
 
